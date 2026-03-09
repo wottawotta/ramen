@@ -1,0 +1,21 @@
+name: Ramen
+options:
+  bundleIdPrefix: com.harperquigley
+  deploymentTarget:
+    macOS: 13.0
+targets:
+  Ramen:
+    type: application
+    platform: macOS
+    sources: [Sources]
+    info:
+      path: Config/Info.plist
+    settings:
+      CODE_SIGN_IDENTITY: "-" # Ad-hoc signing
+      CODE_SIGN_STYLE: Manual
+      ENABLE_HARDENED_RUNTIME: YES
+      SWIFT_VERSION: 5.0
+      # Use an empty entitlements file or default to allow apple events
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    resources: 
+      - Resources
